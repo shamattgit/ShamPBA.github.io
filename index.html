@@ -16,10 +16,40 @@ p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","pba","556cbdbb-
         }
         </script>
     
+    <script>
+        window.onload = function () {
+            document.getElementById('checkout').addEventListener('click', function () {
+                AF('pba', 'event' {eventType: 'EVENT',eventCategory: 'conversion', eventName: 'checkout'});
+            });
+        }
+
+    </script>
+    
     </head>
   
           <body>
+            
                <h1>Thank You for Subscribing to Our Newsletter</h1>
+            
+            <h1>Shopping Cart</h1>
+    <h2>Shirt</h2>
+    <p>
+        <ul>
+            <li>Color: Blue</li>
+            <li>Quantity: 2</li>
+            <li>Price: $20</li>
+        </ul>
+    </p>
+    <h2>Pants</h2>
+    <p>
+        <ul>
+            <li>Color: Black</li>
+            <li>Quantity: 3</li>
+            <li>Price: $15</li>
+        </ul>
+    </p>
+    <button id='checkout'>Checkout</button>
+
            </body>
   
 </html>
