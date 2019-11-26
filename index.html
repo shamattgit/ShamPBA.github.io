@@ -11,6 +11,15 @@ o.src="https://websdk.appsflyer.com?"+(c.length>0?"st="+c.split(",").sort().join
 p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","pba","556cbdbb-a872-4b8a-a337-f6be9b997432")
 </script>
     
+     <script>window.onload = function(){
+            AF('pba', 'event', {eventType: 'EVENT', eventCategory: 'conversion',eventName: 'subscription', eventLabel: 'newsletters'});
+        }
+        </script>
+    
     </head>
-
+  
+          <body>
+               <h1>Thank You for Subscribing to Our Newsletter</h1>
+           </body>
+  
 </html>
