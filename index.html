@@ -20,6 +20,7 @@ p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","pba","556cbdbb-
         window.onload = function () {
             document.getElementById('checkout').addEventListener('click', function () {
                 AF('pba', 'event', {eventType: 'EVENT',eventCategory: 'conversion', eventName: 'checkout'});
+                AF('pba', 'event', {eventType: 'IDENTIFY', customUserId:'663274'})
             });
         }
 
