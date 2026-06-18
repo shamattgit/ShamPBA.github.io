@@ -12,10 +12,22 @@ o.src="https://websdk.appsflyer.com?"+(c.length>0?"st="+c.split(",").sort().join
 p.parentNode.insertBefore(o,p)}(window,document,"script",0,"AF","pba","d3df114b-4c33-4ff9-b5fd-6d4039fcaeb3")
 </script>
 -->
-    <script>
-!function(a,e,f,k,h,g,c,b,d){a.AppsFlyerSdkObject=h;a.AF=a.AF||function(){(a.AF.q=a.AF.q||[]).push([Date.now()].concat(Array.prototype.slice.call(arguments)))};a.AF.id=a.AF.id||c;a.AF.plugins={};b=e.createElement(f);d=e.getElementsByTagName(f)[0];b.async=1;b.src="https://websdk.appsflyersdk.com?"+(0<g.length?"st\x3d"+g.split(",").sort().join(",")+"\x26":"")+(0<c.length?"af_id\x3d"+c:"");d.parentNode.insertBefore(b,d)}(window,document,"script",0,"AF","pba",{pba:{webAppId:"a6ec813d-8f5f-4811-8515-34f8b9c83382"}});
+  <script>
+  // Queue — buffers AF() calls until the SDK is ready
+  window.AppsFlyerSdkObject = "AF";
+  window.AF = window.AF || function() {
+    (window.AF.q = window.AF.q || []).push([Date.now()].concat(Array.prototype.slice.call(arguments)));
+  };
+  window.AF.id = window.AF.id || { pba: { webAppId: "d3df114b-4c33-4ff9-b5fd-6d4039fcaeb3" } };
+  window.AF.plugins = {};
 
-    </script>
+  // Inject SDK
+  var o = document.createElement("script"),
+      p = document.getElementsByTagName("script")[0];
+  o.async = 1;
+  o.src = "https://websdk.appsflyersdk.com?" + "st=pba&af_id=WEB_DEV_KEY";
+  p.parentNode.insertBefore(o, p);
+</script>
     
      <script>window.onload = function(){
             AF('pba', 'event', {eventType: 'EVENT', eventCategory: 'conversion',eventName: 'subscription', eventLabel: 'newsletters'});
